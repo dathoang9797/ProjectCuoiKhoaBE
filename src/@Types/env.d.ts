@@ -9,6 +9,7 @@ declare namespace NodeJS {
     DATABASE: string;
     DATABASE_LOCAL: string;
     DATABASE_PASSWORD: string;
+    DATABASE_PASSWORD_LOCAL: string;
 
     EMAIL_HOST: string;
     EMAIL_PORT: string;

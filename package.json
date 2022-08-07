@@ -2,7 +2,18 @@
   "name": "Node-App",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/bundle.js",
+  "main": "build/bundle.js",
+  "engines": {
+    "node": "14.x"
+  },
+  "scripts": {
+    "dev": "npm run && webpack --watch",
+    "dev:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install  && npm run && webpack --watch",
+    "build:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm run && webpack --mode production",
+    "build": "npm run && webpack --mode production",
+    "start": "node index.js",
+    "debug": "ndb node -r dotenv/config -r ts-node/register src/server.ts"
+  },
   "devDependencies": {
     "@types/bcrypt": "^5.0.0",
     "@types/cookie-parser": "^1.4.3",
@@ -68,14 +79,6 @@
     "webpack-merge": "^5.8.0",
     "webpack-node-externals": "^3.0.0",
     "xss-clean": "^0.1.1"
-  },
-  "scripts": {
-    "dev": "npm run && webpack --watch",
-    "dev:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install  && npm run && webpack --watch",
-    "build:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm run && webpack --mode production",
-    "build": "npm run && webpack --mode production",
-    "start": "serve -s dist",
-    "debug": "ndb node -r dotenv/config -r ts-node/register src/server.ts"
   },
   "author": "dat",
   "license": "ISC"

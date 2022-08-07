@@ -15,8 +15,8 @@ module.exports = {
   mode: prod ? 'production' : 'development',
   devtool: false,
   output: {
-    path: path.resolve(__dirname, 'build'),
-    filename: 'bundle.js'
+    path: path.resolve(__dirname),
+    filename: 'index.js'
   },
   module: {
     rules: [

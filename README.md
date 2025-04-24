@@ -1,1 +1,1 @@
-Vì lý do thời gian làm công ty task nhiều nên mình quay video sơ sài ,mong mentor thông cảm.
+
